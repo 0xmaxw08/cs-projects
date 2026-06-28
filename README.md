@@ -1,1 +1,1 @@
-small projects
+some projects in progress
