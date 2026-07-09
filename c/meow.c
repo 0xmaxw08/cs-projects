@@ -4,18 +4,19 @@
 int main(void){
     int n;
 
-    do {
-        printf("Enter number of repetitions: ");
+    while (true){
+        printf("Enter number of reps: ");
+        scanf("%i", &n);
 
-        if (scanf("%d", &n) != 1) {
-            printf("Invalid Input. Try again. \n");
-            n = -1;
-            while (getchar() != '\n');
+        if (n < 0){
+            continue;
         }
-    } while(n<0);
-
-    for (int i = 0; i < n; i++){
+        else {
+            break;
+        }
+    }
+    for (int i = 0; n > i; i++){
         printf("meow\n");
     }
-    return 0;
 }
+    
