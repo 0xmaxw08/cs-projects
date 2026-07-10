@@ -4,6 +4,8 @@
 int main(void){
     int n;
 
+// NTS: UPDATE
+
     while (true){
         printf("Enter number of reps: ");
         scanf("%i", &n);
