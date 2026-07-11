@@ -1,28 +1,28 @@
 #include <stdio.h>
-#include <stdbool.h>
 
-void meow(void);
+void meow(int times);
 
 int main(void){
-    int n;
+
+    int n = -1;
+    
     do {
-        printf("Positive integer: ");
-        scanf("%i", &n);
-        if (scanf("%i", &n) != 1) {
-            while (getchar() != '\n');  // discard bad input
+        printf("meows: ");
+        if (scanf("%i", &n) != 1){
+            while(getchar() != '\n')
+                continue;
             continue;
         }
+        while (getchar() != '\n')
+            continue;
+    } while (n < 0);
 
-        if (n >= 0){
-            break;
-        }
-    } while(true);
-
-    for (int i = 0; i < n; i++){
-        meow();
-    }
+    meow(n);
 }
 
-void meow(void){
-    printf("meow\n");
+void meow(int times){
+
+    for (int i = 0; i < times; i++){
+        printf("meow");
+    }
 }
