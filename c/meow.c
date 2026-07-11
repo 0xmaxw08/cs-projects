@@ -1,24 +1,28 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+void meow(void);
+
 int main(void){
     int n;
-
-// NTS: UPDATE
-
-    while (true){
-        printf("Enter number of reps: ");
+    do {
+        printf("Positive integer: ");
         scanf("%i", &n);
-
-        if (n < 0){
+        if (scanf("%i", &n) != 1) {
+            while (getchar() != '\n');  // discard bad input
             continue;
         }
-        else {
+
+        if (n >= 0){
             break;
         }
-    }
-    for (int i = 0; n > i; i++){
-        printf("meow\n");
+    } while(true);
+
+    for (int i = 0; i < n; i++){
+        meow();
     }
 }
-    
+
+void meow(void){
+    printf("meow\n");
+}
