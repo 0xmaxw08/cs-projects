@@ -1,3 +1,3 @@
-# About the repoistory
+# About
 
-Don't pay attention here this repo is just a practice/test/learning repo :)
+Don't pay attention to this repo, it is just a practice/test/learning repo :)
